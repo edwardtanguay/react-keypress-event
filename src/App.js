@@ -1,12 +1,14 @@
+import { useState } from 'react';
 import './App.scss';
 
 function App() {
+	const [text, setText] = useState('click on page and type something');
 	const handleKeyPress = (e) => {
-		console.log(e);
+		setText(e.key);
 	}
 	return (
-		<div className="App" onKeyPress={(e) => handleKeyPress(e)}>
-			<p>Hello</p>
+		<div className="App" onKeyPress={(e) => handleKeyPress(e)} tabIndex="-1">
+			<p className="showText">{text}</p>
 		</div>
 	);
 }
