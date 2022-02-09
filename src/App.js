@@ -7,7 +7,7 @@ function App() {
 		setText(e.key);
 	}
 	return (
-		<div className="App" onKeyPress={(e) => handleKeyPress(e)} tabIndex="-1">
+		<div className="App" autoFocus onKeyPress={(e) => handleKeyPress(e)} tabIndex="0">
 			<p className="showText">{text}</p>
 		</div>
 	);
